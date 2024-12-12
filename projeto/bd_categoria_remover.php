@@ -16,7 +16,7 @@ if($result){
     die();
 
 }else{
-    desconectar();
+    desconectar($conn);
     echo("Deu ruim!");
 }
 
