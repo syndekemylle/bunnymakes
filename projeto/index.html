@@ -345,6 +345,12 @@
             border: none;
         }
 
+        .btf a {
+            color:#b3b0f7;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
         .dropdown {
             position: relative;
             display: inline-block;
@@ -472,6 +478,11 @@
             cursor: pointer;
         }
 
+        .footer-newsletter a{
+            text-decoration: none;
+            color:white;
+        }
+
         .footer-newsletter button:hover {
             background-color: #4f33a1;
         }
@@ -510,7 +521,9 @@
             <div class="header-right">
                 <button class="btn">
                     <i class="fas fa-headset icon-button"></i>
-                    Central de Atendimento
+
+                    <p></p> <!-- Quebra de linha usando a tag p -->
+                    <a href="atendimento.html">Central de Atendimento</a>
                 </button>
 
                 <button class="btn">
@@ -522,7 +535,9 @@
 
                 <button class="btn">
                     <i class="fas fa-shopping-cart icon-button"></i>
-                    Carrinho
+
+                    <p></p> <!-- Quebra de linha usando a tag p -->
+                    <a href="carrinho.html">Carrinho</a>
                 </button>
             </div>
         </div>
@@ -547,7 +562,7 @@
         </button>
 
         <button class="btf">
-            Favoritos
+            <a href="carrinho.html">Favoritos</a>
             <i class="fa-solid fa-heart" style="color: #B197FC;"></i>
         </button>
     </header>
@@ -664,9 +679,9 @@
             <div class="footer-section">
             <h4>Seção</h4>
                 <ul>
-                <li><a href="#">Central de atendimento</a></li>
-                <li><a href="#">Entrar ou cadastrar</a></li>
-                <li><a href="#">Carrinho</a></li>
+                <li><a href="atendimento.html">Central de atendimento</a></li>
+                <li><a href="login.html">Entrar ou cadastrar</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
                 </ul>
             </div>
 
@@ -675,15 +690,17 @@
             <p>A Bunny Makes tem o prazer de recebê-lo(a) de braços abertos</p>
                 <form>
                     <input type="email" placeholder="Endereço de e-mail" required>
-                    <button type="submit">Cadastre-se</button>
+                    <button type="submit">
+                        <a href="login.html">Cadastre-se</a>
+                    </button>
                 </form>
             </div>
         </div>
 
         <div class="footer-bottom">
-        <p>© 2024 Compania. Todos os direitos reservados</p>
+        <p>© 2024 Bunny Makes. Todos os direitos reservados</p>
             <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-instagram" style="color: #6441ce;"></i></i></a>
+                <a href="https://www.instagram.com/bunny__makes?igsh=Mjk5YzBsOWJyMDhm"><i class="fa-brands fa-instagram" style="color: #6441ce;"></i></i></a>
                 <a href="#"><i class="fa-brands fa-whatsapp" style="color: #6441ce;"></i></a>
             </div>
         </div>

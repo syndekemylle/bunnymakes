@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Carrinho</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .carrinho {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background-color: #e0e0e0;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .header img {
+            height: 24px;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .item:last-child {
+            border-bottom: none;
+        }
+
+        .item img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .item-info {
+            flex: 1;
+        }
+
+        .item-info h4 {
+            margin: 0;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .item-info p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .item-actions {
+            display: flex;
+            align-items: center;
+        }
+
+        .item-actions button {
+            background: #ddd;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .item-actions button:hover {
+            background: #ccc;
+        }
+
+        .item-actions span {
+            margin: 0 5px;
+        }
+
+        .footer {
+            padding: 10px;
+            background: #6a1b9a;
+            text-align: center;
+        }
+
+        .footer button {
+            background: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            color: #6a1b9a;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .footer button:hover {
+            background: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <div class="carrinho">
+        <div class="header">
+            <img src="img/logo.png" alt="Ícone da logo">
+        </div>
+
+        <div class="item">
+            <img src="https://via.placeholder.com/40" alt="Produto">
+            <div class="item-info">
+                <h4>Sérum para cílios e sobrancelhas</h4>
+                <p>R$ 17,50</p>
+            </div>
+            <div class="item-actions">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="https://via.placeholder.com/40" alt="Produto">
+            <div class="item-info">
+                <h4>Máscara de Cílios Melu</h4>
+                <p>R$ 19,50</p>
+            </div>
+            <div class="item-actions">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="https://via.placeholder.com/40" alt="Produto">
+            <div class="item-info">
+                <h4>Tiara laço lilás</h4>
+                <p>R$ 12,50</p>
+            </div>
+            <div class="item-actions">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <button>Continuar para finalizar</button>
+        </div>
+    </div>
+</body>
+</html>
