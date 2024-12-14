@@ -16,6 +16,7 @@
         header {
             background-color: #b3b0f7; 
             padding: 10px 0;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
         }
 
         .logo img {
@@ -226,22 +227,23 @@
 
 
         .contact-section {
-            background-color: #b3b0f7; 
+            background-image: url(img/fundo_contato.png);
             color: white;
             padding: 50px 0;
             text-align: center;
             position: relative;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
         }
 
        
         .contact-container {
-            background-color: #fff;
+            background-color: white;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
             max-width: 600px;
             margin: 0 auto;
         }
@@ -263,6 +265,11 @@
             text-align: center;
         }
 
+        .contact-box a {
+            text-decoration: none;
+            color:white;
+        }
+
         .contact-box:hover {
             transform: scale(1.1); 
             background-color: #573f8c; 
@@ -270,7 +277,7 @@
 
         
         .contact-box i {
-            font-size: 30px; 
+            font-size: 60px; 
         }
 
         
@@ -335,6 +342,7 @@
             font-size: 20px;
             font-weight: bold;
             justify-content:space-between;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
         }
 
         .btf{
@@ -385,8 +393,7 @@
 
         .recomendacao {
             margin-top: 50px;
-            margin-bottom: 50px;
-            
+            margin-bottom: 100px;
         }
 
         .titulorcm {
@@ -415,6 +422,7 @@
         footer {
             background-color: #f9f9f9;
             padding: 20px 40px;
+            box-shadow: 0px 0px 8px #ccc;
         }
 
         .footer-container {
@@ -632,16 +640,21 @@
         <div class="parallax"></div>
         <div class="contact-container">
             <div class="contact-box">
-                <i class="fab fa-instagram"></i> 
+                <a href="https://www.instagram.com/bunny__makes?igsh=Mjk5YzBsOWJyMDhm">
+                <i class="fab fa-instagram" title="Conheça nosso instagram!"></i></a>
             </div>
             <div class="contact-box">
-                <i class="fab fa-whatsapp"></i> 
+                <i class="fab fa-whatsapp" title="Nosso whatsapp estará disponível em breve!"></i> 
             </div>
             <div class="contact-box">
-                <i class="fas fa-box"></i> 
+                <a href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MDUzMjg0MTUwNzI2MjM5?
+                        story_media_id=3420662489927748174_66775223612&igsh=OTZ6NGJwc29wd3Rl">
+                <i class="fa-solid fa-percent" title="Mais informações sobre as promoções!"></i></a>
             </div>
            <div class="contact-box">
-            <i class="fas fa-tags"></i>
+            <a href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MDUzMjg0MTUwNzI2MjM5?
+                    story_media_id=3420662489927748174_66775223612&igsh=OTZ6NGJwc29wd3Rl">
+            <i class="fa-solid fa-truck" title="Conheça nosso processo de entrega"></i></a>
             </div>
         </div>
     </section>
@@ -700,8 +713,9 @@
         <div class="footer-bottom">
         <p>© 2024 Bunny Makes. Todos os direitos reservados</p>
             <div class="social-icons">
-                <a href="https://www.instagram.com/bunny__makes?igsh=Mjk5YzBsOWJyMDhm"><i class="fa-brands fa-instagram" style="color: #6441ce;"></i></i></a>
-                <a href="#"><i class="fa-brands fa-whatsapp" style="color: #6441ce;"></i></a>
+                <a href="https://www.instagram.com/bunny__makes?igsh=Mjk5YzBsOWJyMDhm" title="Instagram">
+                <i class="fa-brands fa-instagram" style="color: #6441ce;"></i></i></a>
+                <a href="#" title="Whatsapp"><i class="fa-brands fa-whatsapp" style="color: #6441ce;"></i></a>
             </div>
         </div>
 
