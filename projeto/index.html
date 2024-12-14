@@ -380,6 +380,7 @@
         .recomendacao {
             margin-top: 50px;
             margin-bottom: 50px;
+            
         }
 
         .titulorcm {
@@ -390,17 +391,107 @@
         }
 
         .exemplorcm {
+            margin-inline-start: 20%;
+            margin-inline-end: 20%;
             margin-top: 30px; 
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
-            gap: 20px;
+            display: flex;
+            text-align: center;
+            justify-content:space-between;
         }
 
-        .exemplorcm img {
+        .fotorcm img {
             width: 100%;
             height: 200px;
             object-fit: cover;
+            border-radius: 10px;
         }
+
+        footer {
+            background-color: #f9f9f9;
+            padding: 20px 40px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-section, .footer-newsletter {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-section h4, .footer-newsletter h4 {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin: 5px 0;
+        }
+
+        .footer-section ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .footer-section ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-newsletter p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .footer-newsletter form {
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer-newsletter input {
+            flex: 1;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .footer-newsletter button {
+            padding: 5px 10px;
+            border: none;
+            background-color: #6441ce;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .footer-newsletter button:hover {
+            background-color: #4f33a1;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            font-size: 14px;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+        }
+
+        .social-icons a{
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+
     </style>
 </head>
 <body>
@@ -546,16 +637,59 @@
             QUEM JÁ COMPROU RECOMENDA
             <i class="fa-regular fa-star" style="color: #B197FC;"></i>
         </div>
-        <div class="exemplorcm">
-            <img src="" alt="Recomendação 1">
-            <img src="" alt="Recomendação 2">
-            <img src="" alt="Recomendação 3">
+        <div class="exemplorcm ">
+            <div class="fotorcm">
+                <img src="img/recomendacao1.png" alt="Recomendação 1">
+            </div>
+            <div class="fotorcm">
+                <img src="img/recomendacao2.png" alt="Recomendação 2">
+            </div>
+            <div class="fotorcm">
+                <img src="img/recomendacao3.png" alt="Recomendação 3">
+            </div>
         </div>
     </section>
 
-    <section class="rodape">
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+            <h4>Seção</h4>
+                <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Produtos</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+            <h4>Seção</h4>
+                <ul>
+                <li><a href="#">Central de atendimento</a></li>
+                <li><a href="#">Entrar ou cadastrar</a></li>
+                <li><a href="#">Carrinho</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+            <h4>Faça parte da nossa loja</h4>
+            <p>A Bunny Makes tem o prazer de recebê-lo(a) de braços abertos</p>
+                <form>
+                    <input type="email" placeholder="Endereço de e-mail" required>
+                    <button type="submit">Cadastre-se</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+        <p>© 2024 Compania. Todos os direitos reservados</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-instagram" style="color: #6441ce;"></i></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp" style="color: #6441ce;"></i></a>
+            </div>
+        </div>
+
         
-    </section>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
