@@ -1,9 +1,39 @@
+<?php
+
+  if(isset($_POST['submit'])) {
+
+    $cpf = $_POST['cpf'];
+    $nomecompleto = $_POST['nomecompleto'];
+    $nomeusuario = $_POST['nomeusuario'];
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+
+    include "banco/conexao.php";
+
+    $conn = conectar();
+
+    $sql = "INSERT INTO cliente(cpf, nome_completo, nome_de_usuário, email, senha) 
+    VALUES ('$cpf', '$nomecompleto', '$nomeusuario', '$email', '$senha')";
+
+    $result = $conn->query($sql);
+
+    if($result){
+      desconectar($conn);
+      header("Location: index.html");
+      die();
+    } else{
+
+    }
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login e Cadastro</title>
+  <title>Cadastro</title>
  
 </head>
 <body>
@@ -33,29 +63,6 @@
     border-radius: 8px;
   }
   
-  .login, .cadastro {
-    width: 50%;
-    padding: 40px;
-  }
-  
-  .login {
-    background-color: #ba89dd;
-    color: white;
-    padding: 150px 40px 50px 40px; 
-    height: auto; 
-    border: 3px solid #ba89dd;
-    border-radius: 25px;
-  }
-  
-  .login button {
-    border: 3px solid #fff;
-    border-radius: 25px;
-  }
-  
-  .login h2 {
-    margin-bottom: 20px;
-  }
-  
   .cadastro {
     background-color: #ffffff;
     display: flex;
@@ -64,7 +71,8 @@
     align-items: center;
     padding: 40px;
     border-radius: 15px;
-    
+    width: 50%;
+    padding: 40px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
     
   }
@@ -111,22 +119,15 @@
   }
   </style>
     <div class="container">
-      <div class="login">
-        <h2>Bem-vindo(a) <br>de volta!</h2>
-          <form id="login-form" action="index.html" method="post" onsubmit="return validateForm()">
-              <input type="email" id="email" placeholder="E-mail" required>
-              <input type="password" id="senha" placeholder="Senha" required>
-              <button type="submit">Entrar</button>
-            </form>
-      </div>
-    
       <div class="cadastro">
         <h2 style="color:  #ba89dd;">Crie sua conta</h2>
-        <form>
-          <input type="text" placeholder="Nome" required>
-          <input type="email" placeholder="E-mail" required>
-          <input type="password" placeholder="Senha" required>
-          <button type="submit">Cadastrar</button>
+        <form action="cadastro.php" method="POST">
+          <input type="text" name="cpf" placeholder="CPF" required>
+          <input type="text" name="nomecompleto" placeholder="Nome Completo" required>
+          <input type="text" name="nomeusuario" placeholder="Nome de usuário" required>
+          <input type="email" name="email" placeholder="E-mail" required>
+          <input type="password" name="senha" placeholder="Senha" required>
+          <button type="submit" name="submit">Cadastrar</button>
         </form>
       </div>
     </div>
