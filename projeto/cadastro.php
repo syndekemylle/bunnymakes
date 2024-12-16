@@ -58,9 +58,9 @@
     display: flex;
     width: 800px;
     height: 500px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     border-radius: 8px;
+    justify-content: center;
   }
   
   .cadastro {
@@ -73,13 +73,7 @@
     border-radius: 15px;
     width: 50%;
     padding: 40px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
     
-  }
-  
-  .cadastro:hover {
-  
-    box-shadow: 10px 10px 30px rgba(36, 35, 35, 0.3);
   }
   
   .cadastro h2 {

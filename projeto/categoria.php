@@ -58,9 +58,9 @@
             color: black;
         }
 
-        .categoria_cadastrada {
-            display:flex;
-            justify-content: space-between;
+        .categoria_cadastrada p{
+            display:grid;
+            grid-template-columns: 25% 25% 25% 25%;
         }
 
 </style>
@@ -91,9 +91,12 @@
 
                 if($result->num_rows > 0){
                     while($row = $result->fetch_assoc()){
+                        echo "<p>";
                         echo $row["id"]." - ".$row["nome"];
                         echo "<a href='categoria_adicionar.php?id=".$row["id"]."' class='link'>EDITAR</a>";
                         echo "<a href='bd_categoria_remover.php?id=".$row["id"]."' class='link'>REMOVER</a>";
+                        echo "</br>";
+                        echo "</p>";
                     }
 
                 }else{

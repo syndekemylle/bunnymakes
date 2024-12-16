@@ -7,10 +7,13 @@
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f7f7f7;
+            background-color: #fff;
         }
 
         header {
@@ -548,8 +551,118 @@
                 padding: 8px 16px;
             }
         }
-    
+
+
+        *{
+    margin: 0;
+    padding: 0;
+}
+
+.conteudo{
+    width: auto;
+    display: grid;
+    place-content: center;
+    padding: 1rem;
+    position: static;
+}
+.contsecgrid{
+    display: grid;
+    padding: 30px;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.quadro{
+    padding: 20px;
+    line-height: 150%;
+}
+.imgquadro img{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.h2-destaque{
+    text-align: center;
+    justify-content: center;
+}
+ 
+.conteudo{
+    width: auto;
+    display: grid;
+    place-content: center;
+    padding: 1rem;
+    position: static;
+}
+.contsecgrid-produto{
+    display: grid;
+    padding: 30px;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.quadro-produto{
+    padding: 20px;
+    line-height: 150%;
+}
+.imgquadro-produto img{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+ img{
+    width: 100%;
+    transition: 0.5s all ease-in-out;
+}
+img:hover {
+    transform: scale(1.1);
+}
+.imagens {
+    width: 90%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.btn-produto{
+    color: #fff;
+    background: #de7cf7;
+    padding: 4px 30px;
+    border-radius: 25px;
+    align-items: center;
+    border-bottom: none;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+.btn-produto :hover{
+    color: #fa72cb;
+    transition: all .50s ease;
+}
+.product-title{
+    text-align: center;
+}
+.item-produtos{
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-produtos .icons{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin: 10px 20px;
+        color: #9a4bae;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 35px;
+    }
+    .icons{
+        color: #de7cf7;
+    }
+    .icons :hover{
+        color: #fa72cb;
+        transition: all .50s ease;
+    }
     </style>
+
 </head>
 <body>
 
@@ -588,10 +701,29 @@
             <div class="dropdown">
                 <span><a href=""><i class="fas fa-bars" id="menu-bars"></i> Todas as categorias</a></span>
                     <div class="dropdown-content">
-                        <p><a href="">Batom</a></p>
-                        <p><a href="">Gloss</a></p>
-                        <p><a href="">Paletas</a></p>
-                        <p><a href="">Tiaras</a></p>
+                        
+                        <?php
+                
+                        include "banco/conexao.php";
+        
+                        $conn = conectar();
+                        
+                        $sql = "SELECT * FROM categoria";
+        
+                        $result = $conn->query($sql);
+        
+                        if($result->num_rows > 0){
+                            while($row = $result->fetch_assoc()){
+
+                                echo "<p><a href=''>".$row["nome"]."</a></p>"; 
+                                
+                            }
+        
+                        }else{
+                            echo "<p>Não existe categorias cadastradas</p>";
+                        }
+        
+                    ?>
                         <p><a href="categoria.php">Mais opções</a></p>
                     </div>
           </div>
@@ -633,6 +765,7 @@
                     </button>
                 </div>
             </div>
+
             <div class="col-md-6">
                 <h1 style="color: #B197FC;" class="text-center display-4">Bunny Makes</h1>
                 <p style="color: #6441ce;" class="text-muted text-center">
@@ -645,6 +778,8 @@
             </div>
         </div>
     </div>
+
+
 
     
 
@@ -676,6 +811,127 @@
         </div>
         </br>
     </section>
+
+    <div class="conteudo">
+        <div class="contsecgrid">
+            <div class="quadro">
+                <div class="imgquadro"><a href=""><img src="img/post1.jpg"></a></div>
+            </div>
+            <div class="quadro">
+                <div class="imgquadro"><a href=""><img src="img/post2.jpg"></a></div>
+            </div>
+            <div class="quadro">
+                <div class="imgquadro"><a href=""><img src="img/post3.jpg"></a></div>
+            </div>
+            <div class="quadro">
+                <div class="imgquadro"><a href=""><img src="img/post4.jpg"></a></div>
+            </div>
+    </div>
+
+
+   <section class="shopcontainer">
+    <h2 class="section-title"><samp style="font-family: 'Agbalumo', sans-serif;">Chegou Agora na</samp> <span style="color: #b3b0f7; font-family: 'Sour Gummy', sans-serif;">Bunny </span><span style="color: #fa72cb; font-family: 'Sour Gummy', sans-serif;">Makes</span></h2>
+   
+               <div class="contsecgrid-produto">
+                   <div class="quadro-produto">
+                       <div class="imgquadro-produto"><a href=""><img src="img/produto01.jpg"></a></div>
+                       <h2 class="product-title">Delineador Melu</h2>
+                       <div class="item-produtos">
+                        <a href="#" class="icons">
+                       <i class='bx bx-heart'></i></a>
+                       <button class="btn-produto">R$ 18,40</button>
+                       <a href="#" class="icons">
+                       <i class='bx bx-cart add-cart'></i></a>
+                    </div>
+                   </div>
+
+                    <div class="quadro-produto">
+                        <div class="imgquadro-produto"><a href=""><img src="img/produt6.jpg"></a></div>
+                        <h2 class="product-title">Delineador Melu</h2>
+                        <div class="item-produtos">
+                         <a href="#" class="icons">
+                        <i class='bx bx-heart'></i></a>
+                        <button class="btn-produto ">R$ 18,40</button>
+                        <a href="#" class="icons">
+                        <i class='bx bx-cart add-cart'></i></a>
+                     </div>
+                    </div>
+
+                        <div class="quadro-produto">
+                            <div class="imgquadro-produto"><a href=""><img src="img/produto3.jpg"></a></div>
+                            <h2 class="product-title">Delineador Melu</h2>
+                            <div class="item-produtos">
+                             <a href="#" class="icons">
+                            <i class='bx bx-heart'></i></a>
+                            <button class="btn-produto">R$ 18,40</button>
+                            <a href="#" class="icons">
+                            <i class='bx bx-cart add-cart'></i></a>
+                         </div>
+                        </div>
+
+                            <div class="quadro-produto">
+                                <div class="imgquadro-produto"><a href=""><img src="img/produto4.jpg"></a></div>
+                                <h2 class="product-title">Delineador Melu</h2>
+                                <div class="item-produtos">
+                                 <a href="#" class="icons">
+                                <i class='bx bx-heart'></i></a>
+                                <button class="btn-produto">R$ 18,40</button>
+                                <a href="#" class="icons">
+                                <i class='bx bx-cart add-cart'></i></a>
+                             </div>
+                            </div>
+               </div>
+                <h2 class="h2-destaque"><span style="color: #fa72cb; font-family: 'Sour Gummy', sans-serif; text-align: center;">DESTAQUES</span></h2>
+            <div class="contsecgrid-produto">
+                <div class="quadro-produto">
+                    <div class="imgquadro-produto"><a href=""><img src="img/blush.jpg"></a></div>
+                    <h2 class="product-title">Delineador Melu</h2>
+                    <div class="item-produtos">
+                        <a href="#" class="icons">
+                       <i class='bx bx-heart'></i></a>
+                       <button class="btn-produto">R$ 18,40</button>
+                       <a href="#" class="icons">
+                       <i class='bx bx-cart add-cart'></i></a>
+                    </div>
+                </div>
+                <div class="quadro-produto">
+                    <div class="imgquadro-produto"><a href=""><img src="img/blush1.jpg"></a></div>
+                    <h2 class="product-title">Delineador Melu</h2>
+                    <div class="item-produtos">
+                        <a href="#" class="icons">
+                       <i class='bx bx-heart'></i></a>
+                       <button class="btn-produto">R$ 18,40</button>
+                       <a href="#" class="icons">
+                       <i class='bx bx-cart add-cart'></i></a>
+                    </div>
+                </div>
+                <div class="quadro-produto">
+                    <div class="imgquadro-produto"><a href=""><img src="img/images.jpg"></a></div>
+                    <h2 class="product-title">Delineador Melu</h2>
+                    <div class="item-produtos">
+                        <a href="#" class="icons">
+                       <i class='bx bx-heart'></i></a>
+                       <button class="btn-produto">R$ 18,40</button>
+                       <a href="#" class="icons">
+                       <i class='bx bx-cart add-cart'></i></a>
+                    </div>
+                </div>
+                <div class="quadro-produto">
+                    <div class="imgquadro-produto"><a href=""><img src="img/saboneta.jpg"></a></div>
+                    <h2 class="product-title">Delineador Melu</h2>
+                    <div class="item-produtos">
+                        <a href="#" class="icons">
+                       <i class='bx bx-heart'></i></a>
+                       <button class="btn-produto">R$ 18,40</button>
+                       <a href="#" class="icons">
+                       <i class='bx bx-cart add-cart'></i></a>
+                    </div>
+                </div>
+
+
+            </div>  
+
+   </section>
 
     <section class="contact-section">
         <div class="parallax"></div>

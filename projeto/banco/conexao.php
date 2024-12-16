@@ -5,7 +5,7 @@ function conectar(){
 
     $servidor = "localhost";
     $usuario = "root";
-    $senha = "";
+    $senha = "123";
     $banco = "bunny_makes";
 
     //classe estática do SGBD MySQL(mysqli)responsável por criar a conexão, passar parâmetros nessa ordem
